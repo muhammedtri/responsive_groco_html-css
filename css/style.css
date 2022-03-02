@@ -60,6 +60,29 @@ section{
     padding: 0.5rem 2.5rem;
     position: relative;
 }
+.main-title h1 span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    border-style: solid;
+    border-width: 1.5rem;
+    border-color: transparent transparent transparent #eee;
+}
+.main-title h1 span::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right:0;
+    border-style: solid;
+    border-width: 1.5rem;
+    border-color: transparent #eee transparent transparent;
+}
+@media (max-width:500px){
+    .main-title h1{
+        font-size: 1.5rem;
+    }
+}
 .border-effect::before{
     content: "";
     position: absolute;
@@ -77,24 +100,7 @@ section{
     width: 100%;
     border: 2px solid var(--black);
 }
-.main-title h1 span::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left:0;
-    border-style: solid;
-    border-width: 2rem;
-    border-color: transparent transparent transparent #eee;
-}
-.main-title h1 span::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    right:0;
-    border-style: solid;
-    border-width: 2rem;
-    border-color: transparent #eee transparent transparent;
-}
+
 /* Start Header */
 header{
     height: 60px;
@@ -196,7 +202,7 @@ header .container .links i:hover{
         font-size: 1.2rem;
     }
     .hero .text p{
-        width: 400px;
+        max-width: 400px;
     }
 }
 /* Features section */
